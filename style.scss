@@ -1,0 +1,103 @@
+// Colors Variables
+$dark-cyan: hsl(158, 36%, 37%);
+$cream: hsl(30, 38%, 92%);
+$dark-blue: hsl(212, 21%, 14%);
+$dark-grayish-blue: hsl(228, 12%, 48%);
+$white: hsl(0, 0%, 100%);
+
+// Font Variables
+$montserrat: "Montserrat", sans-serif;
+$fraunces: "Fraunces", serif;
+
+//Style
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.product {
+  font-family: $montserrat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: $cream;
+  .card {
+    border-radius: 5px;
+    border-width: 0;
+    border-radius: 10px;
+    .card-img {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .card-body {
+      padding: 25px;
+      h1 {
+        font-family: $fraunces;
+        font-size: 30px;
+        line-height: 30px;
+        color: $dark-blue;
+      }
+      h5 {
+        font-family: $montserrat;
+        font-size: 12px;
+        color: $dark-grayish-blue;
+      }
+      .card-text {
+        color: $dark-grayish-blue;
+        font-size: 14px;
+        line-height: 25px;
+      }
+      .card-price {
+        .discount {
+          font-size: 30px;
+          font-family: $fraunces;
+          font-weight: 700;
+          color: $dark-cyan;
+        }
+        .price {
+          font-family: $montserrat;
+          font-size: 12px;
+          font-weight: 400;
+          color: $dark-grayish-blue;
+          text-decoration: line-through;
+          display: flex;
+          align-items: center;
+        }
+      }
+      .btn-primary {
+        width: 100%;
+        background-color: $dark-cyan;
+        border-width: 0;
+        padding: 14px 0;
+        font-size: 14px;
+        font-weight: 700;
+        &:hover {
+          background-color: rgb(26, 64, 49);
+        }
+        .icon {
+          padding-right: 7px;
+          padding-bottom: 2px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .product {
+    .card {
+      .card-img {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 0;
+      }
+      .btn-primary {
+        padding: 10px 0;
+      }
+    }
+  }
+}
